@@ -16,13 +16,13 @@ return new class extends Migration
             $table->string('description');
             $table->string('addressee');
             $table->string('address');
-            $table->timestamps();
             
-            $table->unsignedBigInteger('truckdriver_id')->nullable();
-            $table->foreign('truckdriver_id')
+            $table->unsignedBigInteger('trucker_id')->nullable();
+            $table->foreign('trucker_id')
             ->references('id')
-            ->on('truck_drivers')
+            ->on('truckers')
             ->onDelete('set null'); 
+            $table->timestamps();
         });
     }
 

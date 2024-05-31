@@ -9,7 +9,7 @@ class Package extends Model
 {
     use HasFactory; 
 
-    public function truckdrivers(){
-        return $this->belongsTo('App\Models\TruckDriver');
+    public function truckers(){
+        return $this->belongsTo('App\Models\Trucker');
     }
 }
